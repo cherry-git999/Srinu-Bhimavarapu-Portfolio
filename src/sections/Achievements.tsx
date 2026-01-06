@@ -52,25 +52,25 @@ export default function Achievements() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gradient mb-3 sm:mb-4 px-4">
             Achievements & Recognition
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto px-6">
             Awards, competitions, leadership roles, and research contributions
           </p>
         </motion.div>
 
         {/* Achievements Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16 px-4 sm:px-0">
           {achievements.map((achievement, index) => (
             <motion.div
               key={index}
-              className="group relative bg-white dark:bg-dark-card rounded-2xl p-6 border border-gray-200 dark:border-dark-border overflow-hidden hover:shadow-xl transition-all"
+              className="group relative bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-6 border border-gray-200 dark:border-dark-border overflow-hidden hover:shadow-xl transition-all"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -82,20 +82,20 @@ export default function Achievements() {
 
               {/* Icon */}
               <motion.div
-                className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${achievement.color} mb-4`}
+                className={`inline-flex p-2.5 sm:p-3 rounded-xl bg-gradient-to-br ${achievement.color} mb-3 sm:mb-4`}
                 whileHover={{ rotate: 360, scale: 1.1 }}
                 transition={{ duration: 0.6 }}
               >
-                <achievement.icon className="w-6 h-6 text-white" />
+                <achievement.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </motion.div>
 
               {/* Category Badge */}
-              <span className="inline-block px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-dark-bg text-gray-600 dark:text-gray-400 rounded-full mb-3">
+              <span className="inline-block px-2.5 sm:px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-dark-bg text-gray-600 dark:text-gray-400 rounded-full mb-2 sm:mb-3">
                 {achievement.category}
               </span>
 
               {/* Content */}
-              <h3 className="text-lg font-bold mb-2 group-hover:text-primary-500 transition-colors">
+              <h3 className="text-base sm:text-lg font-bold mb-2 group-hover:text-primary-500 transition-colors">
                 {achievement.title}
               </h3>
               

@@ -145,31 +145,31 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gradient mb-3 sm:mb-4 px-4">
             Get In Touch
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto px-6">
             Open to projects, collaborations, and opportunities. Feel free to reach out.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 px-4 sm:px-0">
           {/* Left Column - Contact Info */}
           <motion.div
-            className="space-y-8"
+            className="space-y-6 sm:space-y-8"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
             <div>
-              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Contact Information</h3>
               
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={info.label}
@@ -211,15 +211,15 @@ export default function Contact() {
 
             {/* Social Links */}
             <div>
-              <h4 className="text-lg font-semibold mb-4">Connect with me</h4>
-              <div className="flex space-x-4">
+              <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Connect with me</h4>
+              <div className="flex space-x-3 sm:space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={social.label}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`p-4 bg-white dark:bg-dark-bg rounded-xl border border-gray-200 dark:border-dark-border transition-all ${social.color}`}
+                    className={`p-3 sm:p-4 bg-white dark:bg-dark-bg rounded-xl border border-gray-200 dark:border-dark-border transition-all ${social.color}`}
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
@@ -228,7 +228,7 @@ export default function Contact() {
                     whileTap={{ scale: 0.95 }}
                     aria-label={social.label}
                   >
-                    <social.icon className="w-6 h-6" />
+                    <social.icon className="w-5 h-5 sm:w-6 sm:h-6" />
                   </motion.a>
                 ))}
               </div>
@@ -241,8 +241,8 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <form onSubmit={handleSubmit} className="bg-white dark:bg-dark-bg rounded-2xl p-8 border border-gray-200 dark:border-dark-border">
-              <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
+            <form onSubmit={handleSubmit} className="bg-white dark:bg-dark-bg rounded-2xl p-5 sm:p-8 border border-gray-200 dark:border-dark-border">
+              <h3 className="text-xl sm:text-2xl font-bold mb-5 sm:mb-6">Send a Message</h3>
 
               {submitSuccess && (
                 <motion.div

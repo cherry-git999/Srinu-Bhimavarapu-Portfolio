@@ -24,29 +24,29 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gradient mb-3 sm:mb-4 px-4">
             About Me
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto px-6">
             Learn more about my background, education, and what drives my passion for electronics
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Left Column - Image & Stats */}
           <motion.div
-            className="relative"
+            className="relative px-4 sm:px-0"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary-500/20 to-blue-500/20 backdrop-blur-lg border border-primary-500/20">
+            <div className="relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary-500/20 to-blue-500/20 backdrop-blur-lg border border-primary-500/20 max-w-md mx-auto">
               {/* Profile image */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <img 
@@ -85,7 +85,7 @@ export default function About() {
 
           {/* Right Column - Content */}
           <motion.div
-            className="space-y-6"
+            className="space-y-6 px-4 sm:px-0"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -93,11 +93,11 @@ export default function About() {
           >
             {/* Introduction */}
             <div>
-              <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+              <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 I am a second-year Electronics and Communication Engineering student with strong hands-on experience in Digital Logic Design and RTL development using Verilog and SystemVerilog. 
                 My academic training and projects have built a solid foundation in synchronous digital design, FSM-based architectures, and on-chip bus protocols.
               </p>
-              <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
                I have worked extensively with UART, SPI, APB, AXI-Lite, AXI-Stream, and AXI4-Full protocols, and gained practical experience in RTL design, simulation, and debugging using Xilinx ISE, Vivado, and EDA Playground.
                 I am highly interested in SoC and VLSI design roles, where I can contribute to reliable, high-performance hardware systems and continue developing industry-relevant RTL and verification skills.
               </p>
@@ -128,10 +128,10 @@ export default function About() {
             {/* Career Interests */}
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Target className="w-5 h-5 text-primary-500" />
-                <h3 className="text-xl font-semibold">Career Interests</h3>
+                <Target className="w-4 h-4 sm:w-5 sm:h-5 text-primary-500" />
+                <h3 className="text-lg sm:text-xl font-semibold">Career Interests</h3>
               </div>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {interests.map((interest, index) => (
                   <motion.div
                     key={interest}
@@ -141,8 +141,8 @@ export default function About() {
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <div className="w-2 h-2 bg-primary-500 rounded-full" />
-                    <span className="text-sm">{interest}</span>
+                    <div className="w-2 h-2 bg-primary-500 rounded-full flex-shrink-0" />
+                    <span className="text-xs sm:text-sm">{interest}</span>
                   </motion.div>
                 ))}
               </div>

@@ -113,31 +113,31 @@ export default function Experience() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gradient mb-3 sm:mb-4 px-4">
             Experience & Learning
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto px-6">
             My professional journey, certifications, and continuous learning experiences
           </p>
         </motion.div>
 
         {/* Club Roles */}
-        <div className="mb-16">
-          <div className="flex items-center space-x-3 mb-8">
-            <Users className="w-6 h-6 text-primary-500" />
-            <h3 className="text-2xl font-bold">Club Roles & Leadership</h3>
+        <div className="mb-12 sm:mb-16 px-4 sm:px-0">
+          <div className="flex items-center space-x-2 sm:space-x-3 mb-6 sm:mb-8">
+            <Users className="w-5 h-5 sm:w-6 sm:h-6 text-primary-500" />
+            <h3 className="text-xl sm:text-2xl font-bold">Club Roles & Leadership</h3>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {clubRoles.map((role, index) => (
               <motion.div
                 key={index}
-                className="relative pl-8 md:pl-12"
+                className="relative pl-6 sm:pl-8 md:pl-12"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -157,23 +157,23 @@ export default function Experience() {
 
                 {/* Content Card */}
                 <motion.div
-                  className="bg-white dark:bg-dark-bg rounded-xl p-6 border border-gray-200 dark:border-dark-border hover:shadow-lg transition-shadow"
+                  className="bg-white dark:bg-dark-bg rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-dark-border hover:shadow-lg transition-shadow"
                   whileHover={{ x: 10 }}
                 >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                     <div>
-                      <h4 className="text-xl font-bold mb-1">{role.title}</h4>
-                      <p className="text-primary-500 font-medium">{role.club}</p>
+                      <h4 className="text-lg sm:text-xl font-bold mb-1">{role.title}</h4>
+                      <p className="text-sm sm:text-base text-primary-500 font-medium">{role.club}</p>
                     </div>
-                    <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400 mt-2 md:mt-0">
-                      <Calendar className="w-4 h-4" />
+                    <div className="flex items-center space-x-2 text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-2 md:mt-0">
+                      <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
                       <span>{role.duration}</span>
                     </div>
                   </div>
 
                   <ul className="space-y-2">
                     {role.description.map((point, i) => (
-                      <li key={i} className="flex items-start space-x-2 text-sm text-gray-700 dark:text-gray-300">
+                      <li key={i} className="flex items-start space-x-2 text-xs sm:text-sm text-gray-700 dark:text-gray-300">
                         <span className="text-primary-500 mt-1">▹</span>
                         <span>{point}</span>
                       </li>
@@ -186,17 +186,17 @@ export default function Experience() {
         </div>
 
         {/* Internships Timeline */}
-        <div className="mb-16">
-          <div className="flex items-center space-x-3 mb-8">
-            <Briefcase className="w-6 h-6 text-primary-500" />
-            <h3 className="text-2xl font-bold">Internships</h3>
+        <div className="mb-12 sm:mb-16 px-4 sm:px-0">
+          <div className="flex items-center space-x-2 sm:space-x-3 mb-6 sm:mb-8">
+            <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-primary-500" />
+            <h3 className="text-xl sm:text-2xl font-bold">Internships</h3>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
-                className="relative pl-8 md:pl-12"
+                className="relative pl-6 sm:pl-8 md:pl-12"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -216,25 +216,25 @@ export default function Experience() {
 
                 {/* Content Card */}
                 <motion.div
-                  className="bg-white dark:bg-dark-bg rounded-xl p-6 border border-gray-200 dark:border-dark-border hover:shadow-lg transition-shadow"
+                  className="bg-white dark:bg-dark-bg rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-dark-border hover:shadow-lg transition-shadow"
                   whileHover={{ x: 10 }}
                 >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                     <div>
-                      <h4 className="text-xl font-bold mb-1">{exp.title}</h4>
-                      <p className="text-primary-500 font-medium">{exp.company}</p>
+                      <h4 className="text-lg sm:text-xl font-bold mb-1">{exp.title}</h4>
+                      <p className="text-sm sm:text-base text-primary-500 font-medium">{exp.company}</p>
                     </div>
-                    <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400 mt-2 md:mt-0">
-                      <Calendar className="w-4 h-4" />
+                    <div className="flex items-center space-x-2 text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-2 md:mt-0">
+                      <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
                       <span>{exp.duration}</span>
                     </div>
                   </div>
 
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">{exp.location}</p>
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-3 sm:mb-4">{exp.location}</p>
 
-                  <ul className="space-y-2 mb-4">
+                  <ul className="space-y-2 mb-3 sm:mb-4">
                     {exp.description.map((point, i) => (
-                      <li key={i} className="flex items-start space-x-2 text-sm text-gray-700 dark:text-gray-300">
+                      <li key={i} className="flex items-start space-x-2 text-xs sm:text-sm text-gray-700 dark:text-gray-300">
                         <span className="text-primary-500 mt-1">▹</span>
                         <span>{point}</span>
                       </li>
@@ -245,7 +245,7 @@ export default function Experience() {
                     {exp.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="px-3 py-1 text-xs font-medium bg-primary-500/10 text-primary-500 rounded-full"
+                        className="px-2 sm:px-3 py-1 text-xs font-medium bg-primary-500/10 text-primary-500 rounded-full"
                       >
                         {skill}
                       </span>
@@ -258,17 +258,17 @@ export default function Experience() {
         </div>
 
         {/* Certifications Grid */}
-        <div className="mb-16">
-          <div className="flex items-center space-x-3 mb-8">
-            <Award className="w-6 h-6 text-primary-500" />
-            <h3 className="text-2xl font-bold">Certifications</h3>
+        <div className="mb-12 sm:mb-16 px-4 sm:px-0">
+          <div className="flex items-center space-x-2 sm:space-x-3 mb-6 sm:mb-8">
+            <Award className="w-5 h-5 sm:w-6 sm:h-6 text-primary-500" />
+            <h3 className="text-xl sm:text-2xl font-bold">Certifications</h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {certifications.map((cert, index) => (
               <motion.div
                 key={index}
-                className="bg-white dark:bg-dark-bg rounded-xl p-6 border border-gray-200 dark:border-dark-border hover:border-primary-500 transition-all group"
+                className="bg-white dark:bg-dark-bg rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-dark-border hover:border-primary-500 transition-all group"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -277,12 +277,12 @@ export default function Experience() {
               >
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex-1">
-                    <h4 className="font-bold text-lg mb-1 group-hover:text-primary-500 transition-colors">
+                    <h4 className="font-bold text-base sm:text-lg mb-1 group-hover:text-primary-500 transition-colors">
                       {cert.title}
                     </h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">{cert.issuer}</p>
+                    <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">{cert.issuer}</p>
                   </div>
-                  <Award className="w-8 h-8 text-primary-500/20 group-hover:text-primary-500 transition-colors" />
+                  <Award className="w-7 h-7 sm:w-8 sm:h-8 text-primary-500/20 group-hover:text-primary-500 transition-colors" />
                 </div>
 
                 <div className="flex items-center justify-between mb-3">
@@ -306,27 +306,27 @@ export default function Experience() {
         </div>
 
         {/* Workshops & Events */}
-        <div>
-          <div className="flex items-center space-x-3 mb-8">
-            <BookOpen className="w-6 h-6 text-primary-500" />
-            <h3 className="text-2xl font-bold">Workshops & Events</h3>
+        <div className="px-4 sm:px-0">
+          <div className="flex items-center space-x-2 sm:space-x-3 mb-6 sm:mb-8">
+            <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 text-primary-500" />
+            <h3 className="text-xl sm:text-2xl font-bold">Workshops & Events</h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {workshops.map((workshop, index) => (
               <motion.div
                 key={index}
-                className="bg-white dark:bg-dark-bg rounded-xl p-6 border border-gray-200 dark:border-dark-border hover:shadow-lg transition-all"
+                className="bg-white dark:bg-dark-bg rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-dark-border hover:shadow-lg transition-all"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
               >
-                <h4 className="font-bold mb-2">{workshop.title}</h4>
-                <p className="text-sm text-primary-500 mb-2">{workshop.organizer}</p>
+                <h4 className="font-bold mb-2 text-sm sm:text-base">{workshop.title}</h4>
+                <p className="text-xs sm:text-sm text-primary-500 mb-2">{workshop.organizer}</p>
                 <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">{workshop.date}</p>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{workshop.description}</p>
+                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">{workshop.description}</p>
               </motion.div>
             ))}
           </div>

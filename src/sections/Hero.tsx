@@ -13,7 +13,7 @@ export default function Hero() {
       {/* Floating Circuit Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-20 left-10 w-20 h-20 text-primary-500/20"
+          className="absolute top-20 left-4 sm:left-10 w-12 h-12 sm:w-20 sm:h-20 text-primary-500/20"
           animate={{ 
             y: [0, -20, 0],
             rotate: [0, 180, 360]
@@ -24,7 +24,7 @@ export default function Hero() {
         </motion.div>
         
         <motion.div
-          className="absolute top-40 right-20 w-16 h-16 text-blue-500/20"
+          className="absolute top-40 right-10 sm:right-20 w-10 h-10 sm:w-16 sm:h-16 text-blue-500/20"
           animate={{ 
             y: [0, 20, 0],
             rotate: [0, -180, -360]
@@ -124,7 +124,7 @@ export default function Hero() {
 
           {/* Name */}
           <motion.h1
-            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 tracking-tight px-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -134,7 +134,7 @@ export default function Hero() {
 
           {/* Role */}
           <motion.h2
-            className="text-xl md:text-2xl lg:text-3xl font-medium text-gray-600 dark:text-gray-400 mb-6"
+            className="text-base sm:text-lg md:text-2xl lg:text-3xl font-medium text-gray-600 dark:text-gray-400 mb-4 sm:mb-6 px-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
@@ -144,7 +144,7 @@ export default function Hero() {
 
           {/* Tagline */}
           <motion.div
-            className="flex flex-wrap justify-center gap-3 mb-8"
+            className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-8 px-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
@@ -152,7 +152,7 @@ export default function Hero() {
             {['System on Chip', 'VLSI', 'RTL Designing', 'Verification'].map((skill, index) => (
               <motion.span
                 key={skill}
-                className="px-4 py-2 bg-white/50 dark:bg-dark-card/50 backdrop-blur-sm rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-dark-border"
+                className="px-2.5 sm:px-4 py-1.5 sm:py-2 bg-white/50 dark:bg-dark-card/50 backdrop-blur-sm rounded-full text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-dark-border"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.6 + index * 0.1 }}
@@ -165,7 +165,7 @@ export default function Hero() {
 
           {/* Description */}
           <motion.p
-            className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
+            className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed px-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
@@ -177,29 +177,29 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
           >
             <motion.a
               href="#projects"
-              className="group px-8 py-4 bg-primary-500 text-white rounded-lg font-medium flex items-center justify-center space-x-2 hover:bg-primary-600 transition-colors shadow-lg shadow-primary-500/30"
+              className="group px-6 sm:px-8 py-3 sm:py-4 bg-primary-500 text-white rounded-lg font-medium flex items-center justify-center space-x-2 hover:bg-primary-600 transition-colors shadow-lg shadow-primary-500/30 text-sm sm:text-base"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <span>View Projects</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </motion.a>
 
             <motion.a
               href="/srinucv.pdf"
               download
-              className="group px-8 py-4 bg-white dark:bg-dark-card text-gray-900 dark:text-white rounded-lg font-medium flex items-center justify-center space-x-2 border-2 border-gray-300 dark:border-dark-border hover:border-primary-500 dark:hover:border-primary-500 transition-colors"
+              className="group px-6 sm:px-8 py-3 sm:py-4 bg-white dark:bg-dark-card text-gray-900 dark:text-white rounded-lg font-medium flex items-center justify-center space-x-2 border-2 border-gray-300 dark:border-dark-border hover:border-primary-500 dark:hover:border-primary-500 transition-colors text-sm sm:text-base"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Download className="w-5 h-5" />
+              <Download className="w-4 h-4 sm:w-5 sm:h-5" />
               <span>Download Resume</span>
             </motion.a>
           </motion.div>

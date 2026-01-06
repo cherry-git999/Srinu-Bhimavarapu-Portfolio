@@ -72,36 +72,36 @@ export default function Skills() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gradient mb-3 sm:mb-4 px-4">
             Skills & Expertise
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto px-6">
             A comprehensive overview of my technical skills across various domains of electronics and software
           </p>
         </motion.div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 px-4 sm:px-0">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
-              className="bg-white dark:bg-dark-bg rounded-2xl p-6 border border-gray-200 dark:border-dark-border hover:shadow-xl transition-shadow"
+              className="bg-white dark:bg-dark-bg rounded-2xl p-4 sm:p-6 border border-gray-200 dark:border-dark-border hover:shadow-xl transition-shadow"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: categoryIndex * 0.1 }}
             >
               {/* Category Header */}
-              <div className="flex items-center space-x-3 mb-6">
-                <div className={`p-3 rounded-lg bg-gradient-to-br ${category.color} text-white`}>
-                  <category.icon className="w-6 h-6" />
+              <div className="flex items-center space-x-3 mb-5 sm:mb-6">
+                <div className={`p-2 sm:p-3 rounded-lg bg-gradient-to-br ${category.color} text-white`}>
+                  <category.icon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
-                <h3 className="text-xl font-bold">{category.title}</h3>
+                <h3 className="text-lg sm:text-xl font-bold">{category.title}</h3>
               </div>
 
               {/* Skills List */}
@@ -142,13 +142,13 @@ export default function Skills() {
 
         {/* Skill Tags Section */}
         <motion.div
-          className="mt-16 text-center"
+          className="mt-12 sm:mt-16 text-center px-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-bold mb-6">Technologies & Tools</h3>
-          <div className="flex flex-wrap justify-center gap-3">
+          <h3 className="text-xl sm:text-2xl font-bold mb-5 sm:mb-6">Technologies & Tools</h3>
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
             {[
               'Oscilloscope', 'Function Generator', 'Digital Design', 'FPGA',
               'DSP', 'RF Design', 'Microcontrollers',
@@ -158,7 +158,7 @@ export default function Skills() {
             ].map((tech, index) => (
               <motion.span
                 key={tech}
-                className="px-4 py-2 bg-white dark:bg-dark-bg rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-dark-border hover:border-primary-500 hover:text-primary-500 transition-colors cursor-default"
+                className="px-2.5 sm:px-4 py-1.5 sm:py-2 bg-white dark:bg-dark-bg rounded-full text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-dark-border hover:border-primary-500 hover:text-primary-500 transition-colors cursor-default"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}

@@ -80,21 +80,21 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gradient mb-3 sm:mb-4 px-4">
             Featured Projects
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto px-6">
             A showcase of my technical projects demonstrating problem-solving skills and practical implementation
           </p>
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-0">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -127,17 +127,17 @@ export default function Projects() {
               </div>
 
               {/* Project Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-3 group-hover:text-primary-500 transition-colors">
+              <div className="p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 group-hover:text-primary-500 transition-colors">
                   {project.title}
                 </h3>
                 
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4">
                   {project.description}
                 </p>
 
                 {/* Problem-Solution-Outcome */}
-                <div className="space-y-3 mb-4">
+                <div className="space-y-2 sm:space-y-3 mb-3 sm:mb-4">
                   <div>
                     <span className="text-xs font-semibold text-red-500 uppercase">Problem:</span>
                     <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">{project.problem}</p>

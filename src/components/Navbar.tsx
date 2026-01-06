@@ -60,9 +60,9 @@ export default function Navbar() {
             whileTap={{ scale: 0.95 }}
           >
             <div className="relative">
-              <Cpu className="w-7 h-7 text-primary-500 group-hover:rotate-12 transition-transform duration-300" />
+              <Cpu className="w-6 h-6 sm:w-7 sm:h-7 text-primary-500 group-hover:rotate-12 transition-transform duration-300" />
             </div>
-            <span className="text-lg font-semibold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-100 dark:to-gray-300 bg-clip-text text-transparent">Srinu Bhimavarapu</span>
+            <span className="text-base sm:text-lg font-semibold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-100 dark:to-gray-300 bg-clip-text text-transparent">Srinu Bhimavarapu</span>
           </motion.a>
 
           {/* Desktop Navigation */}
