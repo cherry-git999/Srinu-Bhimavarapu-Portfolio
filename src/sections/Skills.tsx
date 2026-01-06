@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Cpu, Code, Wrench, CircuitBoard, Database } from 'lucide-react';
+import { Code, Wrench, CircuitBoard, Database } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
 
 const skillCategories = [

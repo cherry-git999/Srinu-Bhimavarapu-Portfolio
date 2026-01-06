@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Zap } from 'lucide-react';
+import { Github} from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
 
 const projects = [
@@ -65,14 +65,14 @@ const projects = [
   // },
 ];
 
-const gradients = [
-  'from-blue-500 to-cyan-500',
-  'from-purple-500 to-pink-500',
-  'from-green-500 to-emerald-500',
-  'from-orange-500 to-red-500',
-  'from-indigo-500 to-blue-500',
-  'from-yellow-500 to-orange-500',
-];
+// const gradients = [
+//   'from-blue-500 to-cyan-500',
+//   'from-purple-500 to-pink-500',
+//   'from-green-500 to-emerald-500',
+//   'from-orange-500 to-red-500',
+//   'from-indigo-500 to-blue-500',
+//   'from-yellow-500 to-orange-500',
+// ];
 
 export default function Projects() {
   return (

@@ -29,22 +29,22 @@ const achievements = [
   },
 ];
 
-const publications = [
-  {
-    title: 'IoT-Based Real-Time Air Quality Monitoring System',
-    authors: 'Your Name, Co-Author 1, Co-Author 2',
-    publication: 'International Conference on Electronics and Communication (ICEC 2024)',
-    date: 'March 2024',
-    abstract: 'Presented a novel approach for distributed air quality monitoring using LoRa network...',
-  },
-  {
-    title: 'Machine Learning Approach for ECG Arrhythmia Detection',
-    authors: 'Your Name, Guide Name',
-    publication: 'National Symposium on Biomedical Engineering',
-    date: 'December 2023',
-    abstract: 'Developed and validated ML model achieving 95% accuracy in detecting cardiac abnormalities...',
-  },
-];
+// const publications = [
+//   {
+//     title: 'IoT-Based Real-Time Air Quality Monitoring System',
+//     authors: 'Your Name, Co-Author 1, Co-Author 2',
+//     publication: 'International Conference on Electronics and Communication (ICEC 2024)',
+//     date: 'March 2024',
+//     abstract: 'Presented a novel approach for distributed air quality monitoring using LoRa network...',
+//   },
+//   {
+//     title: 'Machine Learning Approach for ECG Arrhythmia Detection',
+//     authors: 'Your Name, Guide Name',
+//     publication: 'National Symposium on Biomedical Engineering',
+//     date: 'December 2023',
+//     abstract: 'Developed and validated ML model achieving 95% accuracy in detecting cardiac abnormalities...',
+//   },
+// ];
 
 export default function Achievements() {
   return (
