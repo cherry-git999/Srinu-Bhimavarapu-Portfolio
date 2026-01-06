@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Github, Linkedin,Send } from 'lucide-react';
 import { useState, type FormEvent } from 'react';
+import emailjs from '@emailjs/browser';
 import SectionWrapper from '../components/SectionWrapper';
 
 const contactInfo = [
@@ -96,16 +97,37 @@ export default function Contact() {
 
     setIsSubmitting(true);
 
-    // Simulate form submission (replace with actual API call)
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      
-      setTimeout(() => {
-        setSubmitSuccess(false);
-      }, 5000);
-    }, 2000);
+    // Send email using EmailJS
+    emailjs
+      .send(
+        'service_dm1rx5f', 
+        'template_7ayl3dk',
+        {
+          from_name: formData.name,
+          to_name: 'Srinu Bhimavarapu',
+          from_email: formData.email,
+          to_email: 'srinubhimavarapu090@gmail.com',
+          subject: formData.subject,
+          message: formData.message,
+        },
+        'nBoP8xG2F1q3h6sia'
+      )
+      .then(
+        () => {
+          setIsSubmitting(false);
+          setSubmitSuccess(true);
+          setFormData({ name: '', email: '', subject: '', message: '' });
+
+          setTimeout(() => {
+            setSubmitSuccess(false);
+          }, 5000);
+        },
+        (error) => {
+          setIsSubmitting(false);
+          console.error('EmailJS Error:', error);
+          alert('Oops! Something went wrong. Please try again or email me directly.');
+        }
+      );
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
