@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Briefcase, Award, BookOpen, Calendar } from 'lucide-react';
+import { Briefcase, Award, BookOpen, Calendar, Users } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
 
 const experiences = [
@@ -84,6 +84,29 @@ const workshops = [
   },
 ];
 
+const clubRoles = [
+  {
+    title: 'Co-Lead',
+    club: 'Industry 4.O Chapter, Codeiam Club',
+    duration: 'Aug 2025 - Present',
+    description: [
+      'Led the planning and execution of the Aviation 4.0 technical event, organizing workshops and project demonstrations',
+      'Mentored junior students on embedded systems and IoT concepts aligned with Industry 4.0 technologies',
+      'Conducted hands-on technical sessions focusing on practical system design and sensor-based applications',
+    ],
+  },
+  // {
+  //   title: 'Core Team Member',
+  //   club: 'Robotics Club',
+  //   duration: 'Aug 2023 - Dec 2023',
+  //   description: [
+  //     'Contributed to design and development of autonomous line-following robots',
+  //     'Assisted in organizing inter-college robotics competitions',
+  //     'Conducted workshops on robot kinematics and control systems',
+  //   ],
+  // },
+];
+
 export default function Experience() {
   return (
     <SectionWrapper id="experience" className="bg-gray-50 dark:bg-dark-card">
@@ -102,6 +125,65 @@ export default function Experience() {
             My professional journey, certifications, and continuous learning experiences
           </p>
         </motion.div>
+
+        {/* Club Roles */}
+        <div className="mb-16">
+          <div className="flex items-center space-x-3 mb-8">
+            <Users className="w-6 h-6 text-primary-500" />
+            <h3 className="text-2xl font-bold">Club Roles & Leadership</h3>
+          </div>
+
+          <div className="space-y-8">
+            {clubRoles.map((role, index) => (
+              <motion.div
+                key={index}
+                className="relative pl-8 md:pl-12"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2 }}
+              >
+                {/* Timeline Line */}
+                <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-500 to-blue-500" />
+                
+                {/* Timeline Dot */}
+                <motion.div
+                  className="absolute left-0 top-2 w-4 h-4 bg-primary-500 rounded-full border-4 border-white dark:border-dark-card transform -translate-x-[7px]"
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.2 + 0.2 }}
+                />
+
+                {/* Content Card */}
+                <motion.div
+                  className="bg-white dark:bg-dark-bg rounded-xl p-6 border border-gray-200 dark:border-dark-border hover:shadow-lg transition-shadow"
+                  whileHover={{ x: 10 }}
+                >
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                    <div>
+                      <h4 className="text-xl font-bold mb-1">{role.title}</h4>
+                      <p className="text-primary-500 font-medium">{role.club}</p>
+                    </div>
+                    <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400 mt-2 md:mt-0">
+                      <Calendar className="w-4 h-4" />
+                      <span>{role.duration}</span>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-2">
+                    {role.description.map((point, i) => (
+                      <li key={i} className="flex items-start space-x-2 text-sm text-gray-700 dark:text-gray-300">
+                        <span className="text-primary-500 mt-1">▹</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
 
         {/* Internships Timeline */}
         <div className="mb-16">
