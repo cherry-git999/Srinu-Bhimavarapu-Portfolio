@@ -13,7 +13,7 @@ export default function Hero() {
       {/* Floating Circuit Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-20 left-4 sm:left-10 w-12 h-12 sm:w-20 sm:h-20 text-primary-500/20"
+          className="absolute top-20 left-2 sm:left-10 w-10 h-10 sm:w-20 sm:h-20 text-primary-500/20 hidden xs:block sm:block"
           animate={{ 
             y: [0, -20, 0],
             rotate: [0, 180, 360]
@@ -24,7 +24,7 @@ export default function Hero() {
         </motion.div>
         
         <motion.div
-          className="absolute top-40 right-10 sm:right-20 w-10 h-10 sm:w-16 sm:h-16 text-blue-500/20"
+          className="absolute top-40 right-2 sm:right-20 w-8 h-8 sm:w-16 sm:h-16 text-blue-500/20 hidden xs:block sm:block"
           animate={{ 
             y: [0, 20, 0],
             rotate: [0, -180, -360]
@@ -105,7 +105,7 @@ export default function Hero() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

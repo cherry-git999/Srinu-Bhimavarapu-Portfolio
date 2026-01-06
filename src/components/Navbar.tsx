@@ -51,18 +51,18 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 md:h-20">
+        <div className="flex justify-between items-center h-16 md:h-20 gap-2">
           {/* Logo */}
           <motion.a
             href="#home"
-            className="flex items-center space-x-2 group"
+            className="flex items-center space-x-2 group flex-shrink min-w-0"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <div className="relative">
+            <div className="relative flex-shrink-0">
               <Cpu className="w-6 h-6 sm:w-7 sm:h-7 text-primary-500 group-hover:rotate-12 transition-transform duration-300" />
             </div>
-            <span className="text-base sm:text-lg font-semibold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-100 dark:to-gray-300 bg-clip-text text-transparent">Srinu Bhimavarapu</span>
+            <span className="text-base sm:text-lg font-semibold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-100 dark:to-gray-300 bg-clip-text text-transparent truncate">Srinu Bhimavarapu</span>
           </motion.a>
 
           {/* Desktop Navigation */}
@@ -83,7 +83,7 @@ export default function Navbar() {
           </div>
 
           {/* Theme Toggle & Mobile Menu Button */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4 flex-shrink-0">
             <motion.button
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-gray-100 dark:bg-dark-card hover:bg-gray-200 dark:hover:bg-dark-border transition-colors"
