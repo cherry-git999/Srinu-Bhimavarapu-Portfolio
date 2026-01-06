@@ -150,10 +150,11 @@ export default function Skills() {
           <h3 className="text-2xl font-bold mb-6">Technologies & Tools</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              'Oscilloscope', 'Function Generator', 'Logic Analyzer', 'FPGA',
-              'DSP', 'RF Design', 'Power Electronics', 'Microcontrollers',
-              'RTOS', 'I2C/SPI/UART', 'ADC/DAC', 'PWM', 'Docker', 'VS Code',
-              'Jupyter', 'AutoCAD', 'Eagle PCB', '3D Printing'
+              'Oscilloscope', 'Function Generator', 'Digital Design', 'FPGA',
+              'DSP', 'RF Design', 'Microcontrollers',
+               'I2C/SPI/UART', 'EDA Playground', 'GitHub', 'VS Code',
+              'Verilog', 'SystemVerilog', 'Protocols AXI', 'Python',
+              'Xilinx ISE', 'Xilinx Vivado', 'Multisim', 'MATLAB',
             ].map((tech, index) => (
               <motion.span
                 key={tech}

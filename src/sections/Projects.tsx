@@ -1,74 +1,68 @@
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Zap } from 'lucide-react';
+import { Github, Zap } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
 
 const projects = [
   {
-    title: 'IoT-Based Smart Home Automation System',
-    description: 'A comprehensive home automation solution using ESP32 and cloud integration for remote monitoring and control.',
-    problem: 'Manual control of home appliances leads to energy wastage and lack of remote access',
-    solution: 'Developed an IoT system with mobile app integration for real-time monitoring and control',
-    outcome: '30% reduction in energy consumption and seamless remote access from anywhere',
-    technologies: ['ESP32', 'MQTT', 'Firebase', 'Flutter', 'Sensors'],
+    title: 'AXI-Lite to APB Bridge (RTL Design)',
+    description: 'Designed a SystemVerilog-based bridge to translate AXI-Lite transactions into APB protocol-compliant transfers for SoC peripheral integration',
+    problem: 'Direct communication between AXI-Lite masters and low-power APB peripherals is not natively supported in SoC designs.',
+    solution: 'Designed and implemented an AXI-Lite to APB bridge in SystemVerilog, handling protocol translation, address decoding, handshaking, and response generation.',
+    outcome: 'Enabled seamless integration of APB peripherals into AXI-based systems with protocol-compliant, reliable data transfers.',
+    technologies: ['SystemVerilog', 'AXI Lite', 'RTL Simulation & Debugging', 'Xilinx Vivado'],
     github: 'https://github.com/yourusername/smart-home',
-    demo: 'https://demo-link.com',
-    image: 'gradient-1',
+    image: '/APB.jpeg',
   },
   {
-    title: 'FPGA-Based Digital Signal Processor',
-    description: 'Implementation of real-time audio filtering and processing algorithms on FPGA hardware.',
-    problem: 'Need for high-speed, low-latency signal processing for audio applications',
-    solution: 'Designed and implemented FIR/IIR filters in Verilog with optimized pipeline architecture',
-    outcome: 'Achieved <1ms latency with 48kHz sampling rate and multiple filter stages',
-    technologies: ['Verilog', 'FPGA', 'Xilinx Vivado', 'DSP', 'MATLAB'],
+    title: 'AXI4-Full Slave Controller',
+    description: ' Implemented an AXI4-Full slave supporting burst read/write operations with proper channel synchronization and address handling.',
+    problem: 'High-throughput memory-mapped systems require burst-based data transfers with efficient bandwidth utilization.',
+    solution: 'Developed an AXI4-Full slave RTL module supporting burst read/write transactions, address alignment, and channel synchronization.',
+    outcome: 'Achieved correct burst handling and improved data throughput, validated through simulation and testbench verification.',
+    technologies: ['SystemVerilog', 'FPGA', 'Xilinx Vivado', 'Functional Simulation','Testbench Development'],
     github: 'https://github.com/yourusername/fpga-dsp',
-    demo: null,
-    image: 'gradient-2',
+    image: '/AXI.jpeg',
   },
   {
-    title: 'Wireless Sensor Network for Environmental Monitoring',
-    description: 'Distributed sensor network for real-time environmental data collection and analysis.',
-    problem: 'Difficult to monitor environmental parameters across large geographical areas',
-    solution: 'Built a mesh network of sensor nodes with data aggregation and visualization',
-    outcome: 'Successfully monitored 50+ parameters across 2km range with 99% uptime',
-    technologies: ['Arduino', 'LoRa', 'Python', 'Flask', 'PostgreSQL'],
-    github: 'https://github.com/yourusername/wsn-monitor',
-    demo: 'https://demo-link.com',
-    image: 'gradient-3',
+    title: 'Traffic Signal Controller (FSM)',
+    description: 'Developed an FSM-based traffic signal controller in Verilog with timed state transitions and safe signal sequencing.',
+    problem: 'Fixed-logic traffic control systems lack structured timing control and scalability.',
+    solution: 'Designed a finite state machine (FSM)-based traffic signal controller using Verilog, implementing timed state transitions and safe signal sequencing.',
+    outcome: 'Produced a deterministic, scalable traffic control design with clear state behavior, verified via simulation.',
+    technologies: ['Verilog','Xilinx ISE', 'Functional Simulation Design','Testbench Development'],
+    github: 'https://github.com/Srinu-bhimavarapu/verilog-projects.git',
+    image: '/fsm.jpeg',
   },
-  {
-    title: 'ECG Signal Processing & Arrhythmia Detection',
-    description: 'Machine learning-based system for automated ECG analysis and heart condition detection.',
-    problem: 'Manual ECG analysis is time-consuming and requires expert knowledge',
-    solution: 'Developed ML model for automated ECG feature extraction and classification',
-    outcome: '95% accuracy in detecting common arrhythmias with real-time processing',
-    technologies: ['Python', 'TensorFlow', 'Signal Processing', 'Arduino', 'AD8232'],
-    github: 'https://github.com/yourusername/ecg-detection',
-    demo: null,
-    image: 'gradient-4',
-  },
-  {
-    title: 'Voice-Controlled Robotic Arm',
-    description: 'Speech recognition enabled robotic arm for pick-and-place operations.',
-    problem: 'Manual control of robotic arms requires constant human attention',
-    solution: 'Integrated speech recognition with servo control for hands-free operation',
-    outcome: 'Achieved 90% voice command accuracy with 5-axis movement precision',
-    technologies: ['Raspberry Pi', 'Python', 'Speech Recognition', 'Servos', '3D Printing'],
-    github: 'https://github.com/yourusername/voice-robot',
-    demo: 'https://demo-link.com',
-    image: 'gradient-5',
-  },
-  {
-    title: 'Smart Energy Meter with Theft Detection',
-    description: 'Advanced energy monitoring system with anomaly detection and cloud reporting.',
-    problem: 'Traditional energy meters lack theft detection and real-time monitoring',
-    solution: 'Designed smart meter with current sensing, tampering alerts, and IoT connectivity',
-    outcome: 'Reduced energy theft by 40% with instant notification system',
-    technologies: ['ESP8266', 'ACS712', 'ThingSpeak', 'Mobile App', 'Alert System'],
-    github: 'https://github.com/yourusername/smart-meter',
-    demo: null,
-    image: 'gradient-6',
-  },
+  // {
+  //   title: 'ECG Signal Processing & Arrhythmia Detection',
+  //   description: 'Machine learning-based system for automated ECG analysis and heart condition detection.',
+  //   problem: 'Manual ECG analysis is time-consuming and requires expert knowledge',
+  //   solution: 'Developed ML model for automated ECG feature extraction and classification',
+  //   outcome: '95% accuracy in detecting common arrhythmias with real-time processing',
+  //   technologies: ['Python', 'TensorFlow', 'Signal Processing', 'Arduino', 'AD8232'],
+  //   github: 'https://github.com/yourusername/ecg-detection',
+  //   image: '/project4.jpg',
+  // },
+  // {
+  //   title: 'Voice-Controlled Robotic Arm',
+  //   description: 'Speech recognition enabled robotic arm for pick-and-place operations.',
+  //   problem: 'Manual control of robotic arms requires constant human attention',
+  //   solution: 'Integrated speech recognition with servo control for hands-free operation',
+  //   outcome: 'Achieved 90% voice command accuracy with 5-axis movement precision',
+  //   technologies: ['Raspberry Pi', 'Python', 'Speech Recognition', 'Servos', '3D Printing'],
+  //   github: 'https://github.com/yourusername/voice-robot',
+  //   image: '/project5.jpg',
+  // },
+  // {
+  //   title: 'Smart Energy Meter with Theft Detection',
+  //   description: 'Advanced energy monitoring system with anomaly detection and cloud reporting.',
+  //   problem: 'Traditional energy meters lack theft detection and real-time monitoring',
+  //   solution: 'Designed smart meter with current sensing, tampering alerts, and IoT connectivity',
+  //   outcome: 'Reduced energy theft by 40% with instant notification system',
+  //   technologies: ['ESP8266', 'ACS712', 'ThingSpeak', 'Mobile App', 'Alert System'],
+  //   github: 'https://github.com/yourusername/smart-meter',
+  //   image: '/project6.jpg',
+  // },
 ];
 
 const gradients = [
@@ -111,44 +105,25 @@ export default function Projects() {
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
             >
-              {/* Project Image/Gradient */}
-              <div className={`h-48 bg-gradient-to-br ${gradients[index % gradients.length]} relative overflow-hidden`}>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <motion.div
-                    className="text-white/30"
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  >
-                    <Zap className="w-24 h-24" />
-                  </motion.div>
-                </div>
+              {/* Project Image */}
+              <div className="h-48 relative overflow-hidden bg-gray-200 dark:bg-gray-800">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
                 
-                {/* Overlay on Hover */}
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center space-x-4">
-                  <motion.a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Github className="w-6 h-6 text-white" />
-                  </motion.a>
-                  
-                  {project.demo && (
-                    <motion.a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <ExternalLink className="w-6 h-6 text-white" />
-                    </motion.a>
-                  )}
-                </div>
+                {/* GitHub Link - Always Visible */}
+                <motion.a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute top-3 right-3 p-2.5 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-full hover:bg-white dark:hover:bg-gray-700 transition-colors shadow-lg"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Github className="w-5 h-5 text-gray-800 dark:text-white" />
+                </motion.a>
               </div>
 
               {/* Project Content */}
@@ -203,7 +178,7 @@ export default function Projects() {
           viewport={{ once: true }}
         >
           <motion.a
-            href="https://github.com/yourusername"
+            href="https://github.com/Srinu-bhimavarapu"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 px-8 py-4 bg-primary-500 text-white rounded-lg font-medium hover:bg-primary-600 transition-colors"
