@@ -1,55 +1,31 @@
 import { motion } from 'framer-motion';
-import { Trophy, Star, FileText, Award } from 'lucide-react';
+import { Trophy, Award, Users } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
 
 const achievements = [
   {
     icon: Trophy,
-    title: 'Smart India Hackathon Finalist',
-    description: 'Reached national finals with IoT-based healthcare monitoring system',
-    date: '2024',
+    title: 'Smart India Hackathon (SIH) 2025 – Internal Round | Top 4 Team',
+    description: 'Developed a Live Bus Tracking System for rural areas, securing a Top 4 position in the institute-level SIH evaluation.',
+    date: '2025',
     category: 'Hackathon',
     color: 'from-yellow-500 to-orange-500',
   },
   {
-    icon: Award,
-    title: 'Best Project Award',
-    description: 'Received best project award for FPGA-based signal processing implementation',
-    date: '2024',
-    category: 'Academic',
-    color: 'from-blue-500 to-cyan-500',
-  },
-  {
-    icon: Star,
-    title: '2nd Place - TechFest Circuit Design',
-    description: 'Secured runner-up position in analog circuit design competition',
-    date: '2023',
-    category: 'Competition',
-    color: 'from-purple-500 to-pink-500',
-  },
-  {
-    icon: Trophy,
-    title: 'IEEE Student Branch President',
-    description: 'Led technical events and workshops, increased membership by 50%',
-    date: '2023-2024',
-    category: 'Leadership',
+    icon: Users,
+    title: 'Spark Nation National Level Hackathon',
+    description: 'Successfully organized and managed a campus-level hackathon, coordinating participants, mentors, and event execution.',
+    date: '2025',
+    category: 'Hackathon Organizer',
     color: 'from-green-500 to-emerald-500',
   },
   {
     icon: Award,
-    title: 'Dean\'s List - Academic Excellence',
-    description: 'Recognized for outstanding academic performance (Top 5% of class)',
-    date: '2023',
-    category: 'Academic',
+    title: 'TechExpo',
+    description: 'Supported event organization, participant coordination, and on-ground execution of the departmental technical expo.',
+    date: '2025',
+    category: 'Event Organizer',
     color: 'from-indigo-500 to-blue-500',
-  },
-  {
-    icon: Star,
-    title: 'Innovation Challenge Winner',
-    description: 'First place in university innovation challenge with smart energy meter',
-    date: '2023',
-    category: 'Competition',
-    color: 'from-red-500 to-orange-500',
   },
 ];
 
@@ -137,7 +113,7 @@ export default function Achievements() {
         </div>
 
         {/* Publications/Research */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -193,10 +169,10 @@ export default function Achievements() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Stats Section */}
-        <motion.div
+        {/* <motion.div
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -222,7 +198,7 @@ export default function Achievements() {
               <div className="text-sm text-gray-600 dark:text-gray-400">{stat.label}</div>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
     </SectionWrapper>
   );

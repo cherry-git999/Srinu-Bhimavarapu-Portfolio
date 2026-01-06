@@ -5,32 +5,31 @@ import SectionWrapper from '../components/SectionWrapper';
 const experiences = [
   {
     type: 'internship',
-    title: 'Electronics Engineering Intern',
-    company: 'Tech Company Name',
-    location: 'City, Country',
-    duration: 'June 2024 - August 2024',
+    title: 'Frontend Developer Intern',
+    company: 'CodSoft',
+    location: 'Remote',
+    duration: 'Sep 2024 - Oct 2024',
     description: [
-      'Designed and tested PCB layouts for embedded systems projects',
-      'Developed firmware for IoT devices using C/C++ and ESP32',
-      'Collaborated with cross-functional teams on product development',
-      'Reduced power consumption by 25% through circuit optimization',
+      'Developed responsive web projects including a portfolio website, landing page, and calculator using HTML, CSS, and JavaScript',
+      'Implemented interactive features and optimized UI for usability and performance',
+      'Utilized Git/GitHub for version control and followed structured development workflows',
     ],
-    skills: ['PCB Design', 'Embedded C', 'IoT', 'Circuit Analysis'],
+    skills: ['HTML', 'CSS', 'JavaScript', 'Git'],
   },
-  {
-    type: 'internship',
-    title: 'Research Intern - Signal Processing',
-    company: 'Research Institute',
-    location: 'City, Country',
-    duration: 'December 2023 - February 2024',
-    description: [
-      'Implemented DSP algorithms for audio processing applications',
-      'Conducted research on adaptive filtering techniques',
-      'Published findings in departmental research symposium',
-      'Achieved 40% improvement in noise reduction algorithms',
-    ],
-    skills: ['MATLAB', 'DSP', 'Python', 'Research'],
-  },
+  // {
+  //   type: 'internship',
+  //   title: 'Research Intern - Signal Processing',
+  //   company: 'Research Institute',
+  //   location: 'City, Country',
+  //   duration: 'December 2023 - February 2024',
+  //   description: [
+  //     'Implemented DSP algorithms for audio processing applications',
+  //     'Conducted research on adaptive filtering techniques',
+  //     'Published findings in departmental research symposium',
+  //     'Achieved 40% improvement in noise reduction algorithms',
+  //   ],
+  //   skills: ['MATLAB', 'DSP', 'Python', 'Research'],
+  // },
 ];
 
 const certifications = [
@@ -66,22 +65,22 @@ const certifications = [
 
 const workshops = [
   {
-    title: 'PCB Design & Fabrication Workshop',
-    organizer: 'IEEE Student Branch',
-    date: 'March 2024',
-    description: 'Hands-on workshop covering complete PCB design lifecycle from schematic to fabrication',
+    title: 'Aviation 4.O - Flying into the Future',
+    organizer: 'Codeiam Club, Andhra University',
+    date: 'Sep 2025',
+    description: 'A powerful workshop on the future of aviation technology, covering advancements in autonomous flight systems, AI integration, and sustainable aviation solutions.',
   },
   {
-    title: 'Hackathon - Smart City Solutions',
-    organizer: 'TechFest 2024',
-    date: 'November 2023',
-    description: 'Developed IoT-based traffic management system, secured 2nd place among 50+ teams',
+    title: 'Ureka',
+    organizer: 'IIT Bombay, E-Cell',
+    date: 'Aug 2025',
+    description: 'A dynamic workshop focused on entrepreneurship, innovation, and startup culture, featuring talks, networking, and hands-on activities.',
   },
   {
-    title: 'FPGA Programming Bootcamp',
-    organizer: 'Xilinx University Program',
-    date: 'August 2023',
-    description: 'Intensive training on FPGA architecture, Verilog programming, and hardware acceleration',
+    title: 'Research To Innovation Workshop',
+    organizer: 'Research Innovation, Andhra University',
+    date: 'Oct 2025',
+    description: 'An engaging workshop that bridges the gap between academic research and practical innovation, encouraging participants to transform ideas into viable solutions.',
   },
 ];
 

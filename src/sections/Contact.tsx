@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin,Send } from 'lucide-react';
 import { useState, type FormEvent } from 'react';
 import SectionWrapper from '../components/SectionWrapper';
 
@@ -7,21 +7,21 @@ const contactInfo = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'srinu.bhimavarapu@example.com',
-    href: 'mailto:srinu.bhimavarapu@example.com',
+    value: 'srinubhimavarapu090@gmail.com',
+    href: 'mailto:srinubhimavarapu090@gmail.com',
     color: 'from-red-500 to-orange-500',
   },
   {
     icon: Phone,
     label: 'Phone',
-    value: '+91 98765 43210',
-    href: 'tel:+919876543210',
+    value: '+91 9502756232',
+    href: 'tel:+919502756232',
     color: 'from-green-500 to-emerald-500',
   },
   {
     icon: MapPin,
     label: 'Location',
-    value: 'Hyderabad, India',
+    value: 'Visakhapatnam, India',
     href: null,
     color: 'from-blue-500 to-cyan-500',
   },
@@ -31,25 +31,19 @@ const socialLinks = [
   {
     icon: Github,
     label: 'GitHub',
-    href: 'https://github.com/yourusername',
+    href: 'https://github.com/Srinu-bhimavarapu',
     color: 'hover:text-gray-900 dark:hover:text-white',
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/yourusername',
+    href: 'https://www.linkedin.com/in/srinu-bhimavarapu-49b75b314/',
     color: 'hover:text-blue-600',
-  },
-  {
-    icon: Twitter,
-    label: 'Twitter',
-    href: 'https://twitter.com/yourusername',
-    color: 'hover:text-blue-400',
   },
   {
     icon: Mail,
     label: 'Email',
-    href: 'mailto:your.email@example.com',
+    href: 'mailto:srinubhimavarapu090@gmail.com',
     color: 'hover:text-red-500',
   },
 ];
@@ -138,7 +132,7 @@ export default function Contact() {
             Get In Touch
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? Feel free to reach out!
+            Open to projects, collaborations, and opportunities. Feel free to reach out.
           </p>
         </motion.div>
 
@@ -217,23 +211,6 @@ export default function Contact() {
                 ))}
               </div>
             </div>
-
-            {/* Decorative Image/Illustration */}
-            <motion.div
-              className="hidden lg:block"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-            >
-              <div className="relative aspect-square rounded-2xl bg-gradient-to-br from-primary-500/20 to-blue-500/20 backdrop-blur-lg border border-primary-500/20 p-8 flex items-center justify-center">
-                <div className="text-center">
-                  <Mail className="w-24 h-24 text-primary-500 mx-auto mb-4" />
-                  <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
-                    Let's build something amazing together!
-                  </p>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Right Column - Contact Form */}
