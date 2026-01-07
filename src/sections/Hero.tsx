@@ -193,7 +193,7 @@ export default function Hero() {
             </motion.a>
 
             <motion.a
-              href="/srinucv.pdf"
+              href="/resume.pdf"
               download
               className="group px-6 sm:px-8 py-3 sm:py-4 bg-white dark:bg-dark-card text-gray-900 dark:text-white rounded-lg font-medium flex items-center justify-center space-x-2 border-2 border-gray-300 dark:border-dark-border hover:border-primary-500 dark:hover:border-primary-500 transition-colors text-sm sm:text-base"
               whileHover={{ scale: 1.05 }}
