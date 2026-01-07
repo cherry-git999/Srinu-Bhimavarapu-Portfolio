@@ -34,33 +34,33 @@ const experiences = [
 
 const certifications = [
   {
-    title: 'Embedded Systems - Shape The World',
-    issuer: 'UT Austin via edX',
-    date: 'July 2024',
-    credentialId: 'ABC123XYZ',
-    skills: ['ARM Cortex-M', 'Real-time OS', 'IoT'],
+    title: 'VLSI System On Chip Design',
+    issuer: 'MAVEN Silicon',
+    date: 'Dec 2024',
+    credentialId: '9345677812',
+    skills: ['SOC', 'RTL', 'FPGA'],
   },
   {
-    title: 'Machine Learning for Signal Processing',
-    issuer: 'NPTEL',
-    date: 'April 2024',
-    credentialId: 'NPTEL24CS456',
-    skills: ['ML', 'Signal Processing', 'Python'],
+    title: 'Typing Mastery Certification',
+    issuer: 'Typing.com',
+    date: 'Sep 2024',
+    credentialId: 'TYPCOM4521',
+    skills: ['Keyboard Proficiency', 'Typing Accuracy', 'Speed'],
   },
-  {
-    title: 'VLSI Design Fundamentals',
-    issuer: 'Coursera',
-    date: 'January 2024',
-    credentialId: 'COUR789DEF',
-    skills: ['VLSI', 'Verilog', 'Digital Design'],
-  },
-  {
-    title: 'Internet of Things',
-    issuer: 'NPTEL',
-    date: 'September 2023',
-    credentialId: 'NPTEL23EC789',
-    skills: ['IoT', 'Protocols', 'Cloud'],
-  },
+  // {
+  //   title: 'VLSI Design Fundamentals',
+  //   issuer: 'Coursera',
+  //   date: 'January 2024',
+  //   credentialId: 'COUR789DEF',
+  //   skills: ['VLSI', 'Verilog', 'Digital Design'],
+  // },
+  // {
+  //   title: 'Internet of Things',
+  //   issuer: 'NPTEL',
+  //   date: 'September 2023',
+  //   credentialId: 'NPTEL23EC789',
+  //   skills: ['IoT', 'Protocols', 'Cloud'],
+  // },
 ];
 
 const workshops = [
