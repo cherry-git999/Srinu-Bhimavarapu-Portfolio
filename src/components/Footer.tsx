@@ -85,7 +85,7 @@ export default function Footer() {
               © {new Date().getFullYear()} All rights reserved.
             </p>
             <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 flex items-center">
-              Made with <Heart className="w-3 h-3 sm:w-4 sm:h-4 mx-1 text-red-500 fill-current" /> by ECE Student
+              Made with <Heart className="w-3 h-3 sm:w-4 sm:h-4 mx-1 text-red-500 fill-current" /> by Charan 
             </p>
           </div>
         </div>
