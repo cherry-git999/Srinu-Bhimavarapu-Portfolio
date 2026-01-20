@@ -10,7 +10,7 @@ const projects = [
     solution: 'Designed a SystemVerilog-based AXI embedded SoC integrating an AXI-Stream data path with an AXI-Lite–controlled APB peripheral subsystem for protocol-compliant communication.',
     outcome: 'Achieved efficient and scalable SoC integration of high-throughput data processing and low-power peripherals, verified through RTL simulation and debugging.',
     technologies: ['SystemVerilog','AXI4 (Full)', 'AXI-Lite','AXI-Stream','AXI Interconnect', 'APB', 'UART', 'SPI', 'GPIO', 'RTL Design', 'RTL Simulation & Debugging', 'Xilinx Vivado'],
-    github: 'https://github.com/Srinu-bhimavarapu/verilog-projects.git',
+    github: 'https://github.com/Srinu-bhimavarapu/AXI-Based-Embedded-SoC-with-Streaming-Data-Path-and-Peripheral-Subsystem.git',
     image: '/soc.png',
   },
   {
@@ -20,7 +20,7 @@ const projects = [
     solution: 'Designed and implemented an AXI-Lite to APB bridge in SystemVerilog, handling protocol translation, address decoding, handshaking, and response generation.',
     outcome: 'Enabled seamless integration of APB peripherals into AXI-based systems with protocol-compliant, reliable data transfers.',
     technologies: ['SystemVerilog', 'AXI Lite', 'RTL Simulation & Debugging', 'Xilinx Vivado'],
-    github: 'https://github.com/yourusername/smart-home',
+    github: 'https://github.com/Srinu-bhimavarapu/AXI_LITE_TO_APB_BRIDGE.git',
     image: '/APB.jpeg',
   },
   {
@@ -30,7 +30,7 @@ const projects = [
     solution: 'Developed an AXI4-Full slave RTL module supporting burst read/write transactions, address alignment, and channel synchronization.',
     outcome: 'Achieved correct burst handling and improved data throughput, validated through simulation and testbench verification.',
     technologies: ['SystemVerilog', 'FPGA', 'Xilinx Vivado', 'Functional Simulation','Testbench Development'],
-    github: 'https://github.com/yourusername/fpga-dsp',
+    github: 'https://github.com/Srinu-bhimavarapu/AXI4_FULL.git',
     image: '/AXI.jpeg',
   },
   // {
