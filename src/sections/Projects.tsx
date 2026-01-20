@@ -3,6 +3,16 @@ import { Github} from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
 
 const projects = [
+   {
+    title: 'AXI Streaming Embedded SoC Design',
+    description: 'Designed a SystemVerilog-based AXI embedded SoC with streaming data path and APB peripheral integration.',
+    problem: 'Integrating high-speed streaming data paths with low-power peripheral control in embedded SoC designs is inefficient due to differing AXI and APB protocol requirements.',
+    solution: 'Designed a SystemVerilog-based AXI embedded SoC integrating an AXI-Stream data path with an AXI-Lite–controlled APB peripheral subsystem for protocol-compliant communication.',
+    outcome: 'Achieved efficient and scalable SoC integration of high-throughput data processing and low-power peripherals, verified through RTL simulation and debugging.',
+    technologies: ['SystemVerilog','AXI4 (Full)', 'AXI-Lite','AXI-Stream','AXI Interconnect', 'APB', 'UART', 'SPI', 'GPIO', 'RTL Design', 'RTL Simulation & Debugging', 'Xilinx Vivado'],
+    github: 'https://github.com/Srinu-bhimavarapu/verilog-projects.git',
+    image: '/soc.png',
+  },
   {
     title: 'AXI-Lite to APB Bridge (RTL Design)',
     description: 'Designed a SystemVerilog-based bridge to translate AXI-Lite transactions into APB protocol-compliant transfers for SoC peripheral integration',
@@ -15,23 +25,13 @@ const projects = [
   },
   {
     title: 'AXI4-Full Slave Controller',
-    description: ' Implemented an AXI4-Full slave supporting burst read/write operations with proper channel synchronization and address handling.',
+    description: 'Implemented an AXI4-Full slave supporting burst read/write operations with proper channel synchronization and address handling.',
     problem: 'High-throughput memory-mapped systems require burst-based data transfers with efficient bandwidth utilization.',
     solution: 'Developed an AXI4-Full slave RTL module supporting burst read/write transactions, address alignment, and channel synchronization.',
     outcome: 'Achieved correct burst handling and improved data throughput, validated through simulation and testbench verification.',
     technologies: ['SystemVerilog', 'FPGA', 'Xilinx Vivado', 'Functional Simulation','Testbench Development'],
     github: 'https://github.com/yourusername/fpga-dsp',
     image: '/AXI.jpeg',
-  },
-  {
-    title: 'Traffic Signal Controller (FSM)',
-    description: 'Developed an FSM-based traffic signal controller in Verilog with timed state transitions and safe signal sequencing.',
-    problem: 'Fixed-logic traffic control systems lack structured timing control and scalability.',
-    solution: 'Designed a finite state machine (FSM)-based traffic signal controller using Verilog, implementing timed state transitions and safe signal sequencing.',
-    outcome: 'Produced a deterministic, scalable traffic control design with clear state behavior, verified via simulation.',
-    technologies: ['Verilog','Xilinx ISE', 'Functional Simulation Design','Testbench Development'],
-    github: 'https://github.com/Srinu-bhimavarapu/verilog-projects.git',
-    image: '/fsm.jpeg',
   },
   // {
   //   title: 'ECG Signal Processing & Arrhythmia Detection',
