@@ -243,4 +243,4 @@ MIT License - feel free to use this template for your own portfolio!
 
 ---
 
-**Made with ❤️ by ECE Students, for ECE Students**
+**Made with ❤️ by Charan, for Students**
